@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+	<name>mod_phocagallery_slideshow_nivo</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>31/12/2011</creationDate>
+	<copyright>Jan Pavelka</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<version>1.0.1</version>
+	<description>MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DESCRIPTION</description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename module="mod_phocagallery_slideshow_nivo">mod_phocagallery_slideshow_nivo.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocagallery_slideshow_nivo.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocagallery_slideshow_nivo.sys.ini</language>
+	</languages>
+
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+			
+<field name="category_id" type="text" default="" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CATEGORY_ID_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CATEGORY_ID_DESC" />
+
+<field name="count_images" type="text" default="5" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_COUNT_IMAGES_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_COUNT_IMAGES_DESC" />
+
+<field name="width" type="text" default="970" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_WIDTH_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_WIDTH_DESC" />
+
+<field name="height" type="text" default="230" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_HEIGHT_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_HEIGHT_DESC" />
+
+<field name="effect" type="list" default="random" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_EFFECT_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_EFFECT_DESC">
+	<option value="sliceDown">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEDOWN</option>
+   <option value="sliceDownLeft">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEDOWNLEFT</option>
+    <option value="sliceUp">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEUP</option>
+    <option value="sliceUpLeft">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEUPLEFT</option>
+   <option value="sliceUpDown">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEUPDOWN</option>
+   <option value="sliceUpDownLeft">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLICEUPDOWNLEFT</option>
+    <option value="fold">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_FOLD</option>
+    <option value="fade">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_FADE</option>
+    <option value="random">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_RANDOM</option>
+    <option value="slideInRight">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLIDEINRIGHT</option>
+   <option value="slideInLeft">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_SLIDEINLEFT</option>
+    <option value="boxRandom">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_BOXRANDOM</option>
+    <option value="boxRain">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_BOXRAIN</option>
+   <option value="boxRainReverse">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_BOXRAINREVERSE</option>
+    <option value="boxRainGrow">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_BOXRAINGROW</option>
+    <option value="boxRainGrowReverse">MOD_PHOCAGALLERY_SLIDESHOW_SLICEDOWN_NIVO_BOXRAINGROWREVERSE</option>
+</field>
+
+<field name="pos_bullets" type="text" default="-30" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_POS_BULLETS_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_POS_BULLETS_DESC" />
+
+<field name="anim_speed" type="text" default="500" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_ANIM_SPEED_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_ANIM_SPEED_DESC" />
+<field name="pause_time" type="text" default="3000" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_PAUSE_TIME_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_PAUSE_TIME_DESC" />
+
+<field name="direction_nav" type="list" default="true" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DIRECTION_NAV_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DIRECTION_NAV_DESC">
+	<option value="false">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="true">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="direction_nav_hide" type="list" default="true" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DIRECTION_NAV_HIDE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DIRECTION_NAV_HIDE_DESC">
+	<option value="false">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="true">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="control_nav" type="list" default="true" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CONTROL_NAV_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CONTROL_NAV_DESC">
+	<option value="false">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="true">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="pause_hover" type="list" default="true" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_PAUSE_HOVER_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_PAUSE_HOVER_DESC">
+	<option value="false">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="true">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="keyboard_nav" type="list" default="true" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_KEYBOARD_NAV_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_KEYBOARD_NAV_DESC">
+	<option value="false">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="true">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="display_desc" type="list" default="1" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DISPLAY_DESC_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DISPLAY_DESC_DESC">
+	<option value="0">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_NO</option>
+	<option value="1">MOD_PHOCAGALLERY_SLIDESHOW_NIVO_YES</option>
+</field>
+
+<field name="desc_opacity" type="text" default="0.6" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DESC_OPACITY_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_DESC_OPACITY_DESC" />
+
+			</fieldset>
+			<fieldset name="advanced">
+		
+<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				
+				<field name="module_css_style" type="text" label="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CSS_STYLE_LABEL" description="MOD_PHOCAGALLERY_SLIDESHOW_NIVO_CSS_STYLE_DESC" />
+				
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+		
+			</fieldset>
+		</fields>
+	</config>
+</extension>
